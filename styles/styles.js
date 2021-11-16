@@ -1,16 +1,19 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet,Dimensions } from "react-native";
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export const styles = StyleSheet.create({
     bannerText:{
         fontSize:20,
         textAlign:'center',
     },
     mainButton:{
-        width:"100%",
-        padding:"10%"
+        padding:10,
+        width:"90%",
+        alignSelf:"center"
     },
     container: {
-      width: "100vw",
-      height:"100vh",
       flex:1,
       alignItems:"center",
     },
@@ -19,8 +22,8 @@ export const styles = StyleSheet.create({
       textAlign:"center"
     },
     image: {
-      width: "200px",
-      height: "200px",
+      width: 200,
+      height: 200,
       alignItems:"center",
       justifyContent:"center"
     },
@@ -31,10 +34,11 @@ export const styles = StyleSheet.create({
     },
     searcherContainer:{
         width:"90%",
-        minHeight:"5vh",
+        maxHeight:"5%",
+        minHeight:"5%",
         borderColor:"gray",
-        borderWidth:"1px",
-        borderRadius:"5px",
+        borderWidth:1,
+        borderRadius:5,
         marginTop:"5%",
         display:"flex",
         alignItems:"center",
@@ -47,11 +51,10 @@ export const styles = StyleSheet.create({
     },
       list:{
         width:"100%",
-        padding:"2%",
+        padding:20,
       },
       searchIcon:{
-        width:"20px",
-        height:"20px",
+        fontSize:15
       }
     
   });
@@ -60,22 +63,22 @@ export const styles = StyleSheet.create({
 export const stylesDetail = StyleSheet.create({
   detailContainer:{
    borderColor:"black",
-   borderWidth:"1px",
-   borderRadius:"10px",
+   borderWidth:1,
+   borderRadius:5,
    width:"90%",
    alignSelf:"center",
-   marginTop:"20px"
+   marginTop:20
   },
   title:{
-    fontSize:"20px",
+    fontSize:20,
     textAlign:"center",
   },steps:{
     width: "100%",
     padding:"5%"
   },
   imageDetail:{
-    width:"300px",
-    height: "300px",
+    width:300,
+    height: 300,
     alignSelf:"center"
   }
 })

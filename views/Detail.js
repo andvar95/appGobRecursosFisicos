@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image,ScrollView } from "react-native";
 import { styles, stylesDetail } from "../styles/styles";
 
 export const Detail = ({ route }) => {
   const { data } = route.params;
   return (
-    <View>
+    <ScrollView>
       <Text style={styles.title}>{data.title}</Text>
       {data.Steps.map((step, idx) => (
         <View key={idx} style={stylesDetail.steps}>
@@ -13,11 +13,11 @@ export const Detail = ({ route }) => {
 
           <Text>
             {step.img && (
-              <Image style={stylesDetail.imageDetail} source={step.img} />
+              <Image style={stylesDetail.imageDetail} source={ step.img } />
             )}
           </Text>
         </View>
       ))}
-    </View>
+    </ScrollView>
   );
 };

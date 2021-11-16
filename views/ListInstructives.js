@@ -8,16 +8,21 @@ import buscar from '../assets/buscar.png'
 
 export function ListInstructives({ navigation }) {
   const [search, setSearch] = useState("");
+  const [focus,setFocus] = useState(false);
+  let searchInput = React.createRef();
 
   return (
     <View style={styles.container}>
       <View style={styles.searcherContainer}>
         <TextInput
-          style={[styles.searcherBar,{outline:"none"}]}
+          style={styles.searcherBar}
           placeholder="Buscar"
+          value = {search }
           onChangeText={(value) => setSearch(value)}
+          onFocus={()=>setFocus(true)}
+          onBlur={()=>setFocus(false)}
         ></TextInput>
-        <Image source={buscar} style={styles.searchIcon} />
+         <Text  style={styles.searchIcon} > {	focus?<Text onPress={()=> setSearch("") } >X</Text>:<Text> &#128270; </Text> }</Text> 
       </View>
 
       <FlatList
