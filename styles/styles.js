@@ -73,12 +73,14 @@ export const stylesDetail = StyleSheet.create({
     fontSize:20,
     textAlign:"center",
   },steps:{
-    width: "100%",
     padding:"5%"
+
   },
   imageDetail:{
+    flex:1,
+    height:300,
     width:300,
-    height: 300,
     alignSelf:"center"
+
   }
 })
