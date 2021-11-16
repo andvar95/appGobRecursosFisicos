@@ -22,7 +22,7 @@ export function ListInstructives({ navigation }) {
           onFocus={()=>setFocus(true)}
           onBlur={()=>setFocus(false)}
         ></TextInput>
-         <Text  style={styles.searchIcon} > {	focus?<Text onPress={()=> setSearch("") } >X</Text>:<Text> &#128270; </Text> }</Text> 
+         <Text onPress={()=> setSearch("") }  style={styles.searchIcon} > {	focus?<Text  >X</Text>:null }</Text> 
       </View>
 
       <FlatList

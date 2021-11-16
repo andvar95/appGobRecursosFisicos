@@ -34,8 +34,8 @@ export const styles = StyleSheet.create({
     },
     searcherContainer:{
         width:"90%",
-        maxHeight:"5%",
-        minHeight:"5%",
+        maxHeight:30,
+        minHeight:30,
         borderColor:"gray",
         borderWidth:1,
         borderRadius:5,
@@ -54,7 +54,8 @@ export const styles = StyleSheet.create({
         padding:20,
       },
       searchIcon:{
-        fontSize:15
+        fontSize:20,
+        paddingHorizontal:"3%"
       }
     
   });
